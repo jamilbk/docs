@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `ppc64le` builds of [the `ubuntu` official image](https://hub.docker.com/_/ubuntu) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,12 +26,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20221019`, `bionic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-bionic-amd64-20221019&id=351306c6043bd360b94781a7db9fcb2ea1d2ff23)
--	[`20.04`, `focal-20221019`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-focal-amd64-20221019&id=7f6cfb71524baae0a1019f2c7b2530dff2d40c6e)
--	[`22.04`, `jammy-20221101`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-jammy-amd64-20221101&id=94ab0c78ee1594e0ef5daa7a191edc55d69385db)
--	[`22.10`, `kinetic-20221101`, `kinetic`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-kinetic-amd64-20221101&id=689d32e4ae40ee1b818aedf9ec07e938e9e4ba11)
--	[`14.04`, `trusty-20191217`, `trusty`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-trusty-amd64-20191217&id=131f6d8ad3ff6875f210766c88b463f96992b5ab)
--	[`16.04`, `xenial-20210804`, `xenial`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-xenial-amd64-20210804&id=45e83e2e11f641ba2fea381e705ededbd2778f16)
+-	[`18.04`, `bionic-20221019`, `bionic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-bionic-ppc64le-20221019&id=1c695547348e8df3ffae9101639e89bbf7f38bab)
+-	[`20.04`, `focal-20221019`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-focal-ppc64le-20221019&id=b8ac4752ead0f57459d7250baa3414109d501c8f)
+-	[`22.04`, `jammy-20221101`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-jammy-ppc64le-20221101&id=7d4f0b659464d53499a40a4969486f5961ccb94d)
+-	[`22.10`, `kinetic-20221101`, `kinetic`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-kinetic-ppc64le-20221101&id=7aeb0b8c1462f155efb127cb5efb9ba9cc85c5b3)
+-	[`14.04`, `trusty-20191217`, `trusty`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-trusty-ppc64le-20191217&id=f6019f3397b8b562e7efeee5d6b3548940f2e9e6)
+-	[`16.04`, `xenial-20210804`, `xenial`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-xenial-ppc64le-20210804&id=84a7f1fb1092f5f6735a63cf802aaafef1e676bd)
+
+[![ppc64le/ubuntu build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/ubuntu.svg?label=ppc64le/ubuntu%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/ubuntu/)
 
 # Quick reference (cont.)
 
@@ -64,9 +68,9 @@ Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue throu
 
 This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/oci/ for Bionic and later and https://partner-images.canonical.com/core/ for older releases).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `ppc64le/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ppc64le/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `ppc64le/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 
