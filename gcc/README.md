@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `riscv64` builds of [the `gcc` official image](https://hub.docker.com/_/gcc) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,10 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`12.2.0`, `12.2`, `12`, `latest`, `12.2.0-bullseye`, `12.2-bullseye`, `12-bullseye`, `bullseye`](https://github.com/docker-library/gcc/blob/523e01b2ccf43f1fd702aa9fdc2f71c827b76525/12/Dockerfile)
--	[`11.3.0`, `11.3`, `11`, `11.3.0-bullseye`, `11.3-bullseye`, `11-bullseye`](https://github.com/docker-library/gcc/blob/a5a94a2d5c812fe57f6f28713b0f899b879145d3/11/Dockerfile)
--	[`10.4.0`, `10.4`, `10`, `10.4.0-buster`, `10.4-buster`, `10-buster`](https://github.com/docker-library/gcc/blob/1e3174f36d64a3ce1373a7004a7f0d4f98de307b/10/Dockerfile)
--	[`9.5.0`, `9.5`, `9`, `9.5.0-buster`, `9.5-buster`, `9-buster`](https://github.com/docker-library/gcc/blob/6c40a41a202b2996b26b52e94762fe9aa8830766/9/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `riscv64` ARCHITECTURE
+
+[![riscv64/gcc build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/riscv64/job/gcc.svg?label=riscv64/gcc%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/riscv64/job/gcc/)
 
 # Quick reference (cont.)
 
@@ -63,7 +64,7 @@ The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Proje
 The most straightforward way to use this image is to use a gcc container as both the build and runtime environment. In your `Dockerfile`, writing something along the lines of the following will compile and run your project:
 
 ```dockerfile
-FROM gcc:4.9
+FROM riscv64/gcc:4.9
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN gcc -o myapp main.c
@@ -82,13 +83,13 @@ $ docker run -it --rm --name my-running-app my-gcc-app
 There may be occasions where it is not appropriate to run your app inside a container. To compile, but not run your app inside the Docker instance, you can write something like:
 
 ```console
-$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:4.9 gcc -o myapp myapp.c
+$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp riscv64/gcc:4.9 gcc -o myapp myapp.c
 ```
 
 This will add your current directory, as a volume, to the container, set the working directory to the volume, and run the command `gcc -o myapp myapp.c.` This tells gcc to compile the code in `myapp.c` and output the executable to myapp. Alternatively, if you have a `Makefile`, you can instead run the `make` command inside your container:
 
 ```console
-$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:4.9 make
+$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp riscv64/gcc:4.9 make
 ```
 
 # License
