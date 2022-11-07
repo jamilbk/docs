@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm64v8` builds of [the `almalinux` official image](https://hub.docker.com/_/almalinux) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,12 +26,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.5`, `8.5-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-x86_64-default)
--	[`8.5-minimal`, `8.5-minimal-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-x86_64-minimal)
--	[`latest`, `8`, `8.6`, `8.6-20221101`](https://github.com/AlmaLinux/docker-images/blob/03cdf71dcf08b0563a6be20b91d0d6e0ee686cda/Dockerfile-x86_64-default)
--	[`minimal`, `8-minimal`, `8.6-minimal`, `8.6-minimal-20221101`](https://github.com/AlmaLinux/docker-images/blob/03cdf71dcf08b0563a6be20b91d0d6e0ee686cda/Dockerfile-x86_64-minimal)
--	[`9`, `9.0`, `9.0-20221102`](https://github.com/AlmaLinux/docker-images/blob/287e5d57d3374394e498701a6a65420b05cd7450/Dockerfile-x86_64-default)
--	[`9-minimal`, `9.0-minimal`, `9.0-minimal-20221102`](https://github.com/AlmaLinux/docker-images/blob/287e5d57d3374394e498701a6a65420b05cd7450/Dockerfile-x86_64-minimal)
+-	[`8.5`, `8.5-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-aarch64-default)
+-	[`8.5-minimal`, `8.5-minimal-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-aarch64-minimal)
+-	[`latest`, `8`, `8.6`, `8.6-20221101`](https://github.com/AlmaLinux/docker-images/blob/376f653625e4c1aa32fc0e13720d2fbb7466832b/Dockerfile-aarch64-default)
+-	[`minimal`, `8-minimal`, `8.6-minimal`, `8.6-minimal-20221101`](https://github.com/AlmaLinux/docker-images/blob/376f653625e4c1aa32fc0e13720d2fbb7466832b/Dockerfile-aarch64-minimal)
+-	[`9`, `9.0`, `9.0-20221102`](https://github.com/AlmaLinux/docker-images/blob/6bb269890d909ee3bae69c591624435beabee306/Dockerfile-aarch64-default)
+-	[`9-minimal`, `9.0-minimal`, `9.0-minimal-20221102`](https://github.com/AlmaLinux/docker-images/blob/6bb269890d909ee3bae69c591624435beabee306/Dockerfile-aarch64-minimal)
+
+[![arm64v8/almalinux build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/almalinux.svg?label=arm64v8/almalinux%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/almalinux/)
 
 # Quick reference (cont.)
 
@@ -62,13 +66,13 @@ WARNING:
 
 The default (platform) image is a general-purpose image with a full DNF stack and basic tools like find, tar, vi, etc.
 
-The `almalinux:latest` tag will always point to the latest stable release of the default image. Major releases and minor releases are also tagged with their version (e.g. `almalinux:8` or `almalinux:8.4`).
+The `arm64v8/almalinux:latest` tag will always point to the latest stable release of the default image. Major releases and minor releases are also tagged with their version (e.g. `arm64v8/almalinux:8` or `arm64v8/almalinux:8.4`).
 
 ## Minimal image
 
 The minimal image is a stripped-down image that uses the microdnf package manager and contains a very limited package set. It is designed for applications that come with their own dependencies bundled (e.g. NodeJS, Python).
 
-The `almalinux:minimal` tag always points to the most recent version of the minimal image. Tags for major (e.g. `almalinux:8-minimal`) and minor (e.g. `almalinux:8.4-minimal`) releases are also available.
+The `arm64v8/almalinux:minimal` tag always points to the most recent version of the minimal image. Tags for major (e.g. `arm64v8/almalinux:8-minimal`) and minor (e.g. `arm64v8/almalinux:8.4-minimal`) releases are also available.
 
 ### Upgrade policy
 
