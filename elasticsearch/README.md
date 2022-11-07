@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `mips64le` builds of [the `elasticsearch` official image](https://hub.docker.com/_/elasticsearch) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,8 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.5.0`](https://github.com/docker-library/elasticsearch/blob/880612c18229a15d10ee548cfc87878973bc4cbb/8/Dockerfile)
--	[`7.17.7`](https://github.com/docker-library/elasticsearch/blob/c9d6474663e3d707c9792e793c4e67d6b773f006/7/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `mips64le` ARCHITECTURE
+
+[![mips64le/elasticsearch build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/mips64le/job/elasticsearch.svg?label=mips64le/elasticsearch%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/mips64le/job/elasticsearch/)
 
 # Quick reference (cont.)
 
