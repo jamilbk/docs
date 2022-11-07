@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `windows-amd64` builds of [the `solr` official image](https://hub.docker.com/_/solr) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,9 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`9.0.0`, `9.0`, `9`, `latest`](https://github.com/apache/solr-docker/blob/46493704912ffeb3e70d2d9fb91701089e65b8e1/9.0/Dockerfile)
--	[`8.11.2`, `8.11`, `8`](https://github.com/apache/solr-docker/blob/46493704912ffeb3e70d2d9fb91701089e65b8e1/8.11/Dockerfile)
--	[`8.11.2-slim`, `8.11-slim`, `8-slim`](https://github.com/apache/solr-docker/blob/46493704912ffeb3e70d2d9fb91701089e65b8e1/8.11-slim/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `windows-amd64` ARCHITECTURE
+
+[![winamd64/solr build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/solr.svg?label=winamd64/solr%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/solr/)
 
 # Quick reference (cont.)
 
@@ -62,7 +64,7 @@ Full documentation can be found in the [Solr Reference Guide's Docker section](h
 To run a single Solr server:
 
 ```console
-$ docker run -p 8983:8983 -t solr
+$ docker run -p 8983:8983 -t winamd64/solr
 ```
 
 Then with a web browser go to http://localhost:8983/ to see the Solr Admin Console.
@@ -86,18 +88,6 @@ References:
 -	[CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228): Solr *was* vulnerable to this.
 -	[CVE-2021-45046](https://nvd.nist.gov/vuln/detail/CVE-2021-45046): Solr *never was* vulnerable to this.
 -	[Solr security bulletin](https://solr.apache.org/security.html#apache-solr-affected-by-apache-log4j-cve-2021-44228)
-
-# Image Variants
-
-The `solr` images come in many flavors, each designed for a specific use case.
-
-## `solr:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `solr:<version>-slim`
-
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `solr`. Unless you are working in an environment where *only* the `solr` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

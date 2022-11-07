@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `windows-amd64` builds of [the `sapmachine` official image](https://hub.docker.com/_/sapmachine) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,9 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`11`, `11.0.17`](https://github.com/SAP/SapMachine-infrastructure/blob/f4f56d1abee377e191352ed29fcafc6dd728316f/dockerfiles/official/11/Dockerfile)
--	[`17`, `17.0.5`, `lts`](https://github.com/SAP/SapMachine-infrastructure/blob/1589efab2b72b9c79199f6cc13b556b59f3f9aef/dockerfiles/official/17/Dockerfile)
--	[`19`, `19.0.1`, `latest`](https://github.com/SAP/SapMachine-infrastructure/blob/fe7701419658f9f20ec2215de6141eae53c3e5bf/dockerfiles/official/19/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `windows-amd64` ARCHITECTURE
+
+[![winamd64/sapmachine build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/sapmachine.svg?label=winamd64/sapmachine%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/sapmachine/)
 
 # Quick reference (cont.)
 
@@ -64,14 +66,14 @@ Java and all Java-based trademarks and logos are trademarks or registered tradem
 You can pull and test the image with the following commands:
 
 ```console
-docker pull sapmachine:latest
-docker run -it sapmachine:latest java -version
+docker pull winamd64/sapmachine:latest
+docker run -it winamd64/sapmachine:latest java -version
 ```
 
 You can also use the SapMachine image as a base image to run your own jar file:
 
 ```dockerfile
-FROM sapmachine:latest
+FROM winamd64/sapmachine:latest
 RUN mkdir /opt/myapp
 COPY myapp.jar /opt/myapp
 CMD ["java", "-jar", "/opt/myapp/myapp.jar"]
