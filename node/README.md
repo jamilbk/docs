@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm32v5` builds of [the `node` official image](https://hub.docker.com/_/node) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,30 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`19-alpine3.15`, `19.0-alpine3.15`, `19.0.0-alpine3.15`, `alpine3.15`, `current-alpine3.15`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/alpine3.15/Dockerfile)
--	[`19-alpine`, `19-alpine3.16`, `19.0-alpine`, `19.0-alpine3.16`, `19.0.0-alpine`, `19.0.0-alpine3.16`, `alpine`, `alpine3.16`, `current-alpine`, `current-alpine3.16`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/alpine3.16/Dockerfile)
--	[`19`, `19-bullseye`, `19.0`, `19.0-bullseye`, `19.0.0`, `19.0.0-bullseye`, `bullseye`, `current`, `current-bullseye`, `latest`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/bullseye/Dockerfile)
--	[`19-bullseye-slim`, `19-slim`, `19.0-bullseye-slim`, `19.0-slim`, `19.0.0-bullseye-slim`, `19.0.0-slim`, `bullseye-slim`, `current-bullseye-slim`, `current-slim`, `slim`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/bullseye-slim/Dockerfile)
--	[`19-buster`, `19.0-buster`, `19.0.0-buster`, `buster`, `current-buster`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/buster/Dockerfile)
--	[`19-buster-slim`, `19.0-buster-slim`, `19.0.0-buster-slim`, `buster-slim`, `current-buster-slim`](https://github.com/nodejs/docker-node/blob/521cc918805cfc24e31e7d4460aba80a5e5743da/19/buster-slim/Dockerfile)
--	[`18-alpine3.15`, `18.12-alpine3.15`, `18.12.0-alpine3.15`, `hydrogen-alpine3.15`, `lts-alpine3.15`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/alpine3.15/Dockerfile)
--	[`18-alpine`, `18-alpine3.16`, `18.12-alpine`, `18.12-alpine3.16`, `18.12.0-alpine`, `18.12.0-alpine3.16`, `hydrogen-alpine`, `hydrogen-alpine3.16`, `lts-alpine`, `lts-alpine3.16`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/alpine3.16/Dockerfile)
--	[`18`, `18-bullseye`, `18.12`, `18.12-bullseye`, `18.12.0`, `18.12.0-bullseye`, `hydrogen`, `hydrogen-bullseye`, `lts`, `lts-bullseye`, `lts-hydrogen`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/bullseye/Dockerfile)
--	[`18-bullseye-slim`, `18-slim`, `18.12-bullseye-slim`, `18.12-slim`, `18.12.0-bullseye-slim`, `18.12.0-slim`, `hydrogen-bullseye-slim`, `hydrogen-slim`, `lts-bullseye-slim`, `lts-slim`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/bullseye-slim/Dockerfile)
--	[`18-buster`, `18.12-buster`, `18.12.0-buster`, `hydrogen-buster`, `lts-buster`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/buster/Dockerfile)
--	[`18-buster-slim`, `18.12-buster-slim`, `18.12.0-buster-slim`, `hydrogen-buster-slim`, `lts-buster-slim`](https://github.com/nodejs/docker-node/blob/f05fbf88068ba29ac9b544a72c9471ba60243e4b/18/buster-slim/Dockerfile)
--	[`16-alpine3.15`, `16.18-alpine3.15`, `16.18.0-alpine3.15`, `gallium-alpine3.15`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/alpine3.15/Dockerfile)
--	[`16-alpine`, `16-alpine3.16`, `16.18-alpine`, `16.18-alpine3.16`, `16.18.0-alpine`, `16.18.0-alpine3.16`, `gallium-alpine`, `gallium-alpine3.16`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/alpine3.16/Dockerfile)
--	[`16-bullseye`, `16.18-bullseye`, `16.18.0-bullseye`, `gallium-bullseye`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/bullseye/Dockerfile)
--	[`16-bullseye-slim`, `16.18-bullseye-slim`, `16.18.0-bullseye-slim`, `gallium-bullseye-slim`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/bullseye-slim/Dockerfile)
--	[`16`, `16-buster`, `16.18`, `16.18-buster`, `16.18.0`, `16.18.0-buster`, `gallium`, `gallium-buster`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/buster/Dockerfile)
--	[`16-buster-slim`, `16-slim`, `16.18-buster-slim`, `16.18-slim`, `16.18.0-buster-slim`, `16.18.0-slim`, `gallium-buster-slim`, `gallium-slim`](https://github.com/nodejs/docker-node/blob/8edd510a1b2f64330fd7b865afd12d88c3c21679/16/buster-slim/Dockerfile)
--	[`14-alpine3.15`, `14.21-alpine3.15`, `14.21.0-alpine3.15`, `fermium-alpine3.15`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/alpine3.15/Dockerfile)
--	[`14-alpine`, `14-alpine3.16`, `14.21-alpine`, `14.21-alpine3.16`, `14.21.0-alpine`, `14.21.0-alpine3.16`, `fermium-alpine`, `fermium-alpine3.16`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/alpine3.16/Dockerfile)
--	[`14-bullseye`, `14.21-bullseye`, `14.21.0-bullseye`, `fermium-bullseye`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/bullseye/Dockerfile)
--	[`14-bullseye-slim`, `14.21-bullseye-slim`, `14.21.0-bullseye-slim`, `fermium-bullseye-slim`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/bullseye-slim/Dockerfile)
--	[`14`, `14-buster`, `14.21`, `14.21-buster`, `14.21.0`, `14.21.0-buster`, `fermium`, `fermium-buster`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/buster/Dockerfile)
--	[`14-buster-slim`, `14-slim`, `14.21-buster-slim`, `14.21-slim`, `14.21.0-buster-slim`, `14.21.0-slim`, `fermium-buster-slim`, `fermium-slim`](https://github.com/nodejs/docker-node/blob/6186eff9cea628d90d4f83657d56d0502b515ced/14/buster-slim/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `arm32v5` ARCHITECTURE
+
+[![arm32v5/node build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/node.svg?label=arm32v5/node%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/node/)
 
 # Quick reference (cont.)
 
@@ -83,30 +64,6 @@ Node.js internally uses the Google V8 JavaScript engine to execute code; a large
 # How to use this image
 
 See [How To Use This Image](https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image) on GitHub for up-to-date documentation.
-
-# Image Variants
-
-The `node` images come in many flavors, each designed for a specific use case.
-
-## `node:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-Some of these tags may have names like bullseye or buster in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
-
-This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
-
-## `node:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
-
-## `node:<version>-slim`
-
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `node`. Unless you are working in an environment where *only* the `node` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 
