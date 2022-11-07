@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm32v7` builds of [the `alpine` official image](https://hub.docker.com/_/alpine) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,11 +26,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`20220715`, `edge`](https://github.com/alpinelinux/docker-alpine/blob/7593add9a3b59c2ee114e60bd2b2a27dc955cbfb/x86_64/Dockerfile)
--	[`3.16.2`, `3.16`, `3`, `latest`](https://github.com/alpinelinux/docker-alpine/blob/adebcfd075c83ef788b5f071678dcfb8ea118bb3/x86_64/Dockerfile)
--	[`3.15.6`, `3.15`](https://github.com/alpinelinux/docker-alpine/blob/a9e802051a3a2ae7d6fdd32ff6f5b39e62240089/x86_64/Dockerfile)
--	[`3.14.8`, `3.14`](https://github.com/alpinelinux/docker-alpine/blob/a6c74aa475f4bc471e72f527db6256d8c3a52434/x86_64/Dockerfile)
--	[`3.13.12`, `3.13`](https://github.com/alpinelinux/docker-alpine/blob/4e7658cebff5e569496deea3556a6e258df12a65/x86_64/Dockerfile)
+-	[`20220715`, `edge`](https://github.com/alpinelinux/docker-alpine/blob/7593add9a3b59c2ee114e60bd2b2a27dc955cbfb/armv7/Dockerfile)
+-	[`3.16.2`, `3.16`, `3`, `latest`](https://github.com/alpinelinux/docker-alpine/blob/adebcfd075c83ef788b5f071678dcfb8ea118bb3/armv7/Dockerfile)
+-	[`3.15.6`, `3.15`](https://github.com/alpinelinux/docker-alpine/blob/a9e802051a3a2ae7d6fdd32ff6f5b39e62240089/armv7/Dockerfile)
+-	[`3.14.8`, `3.14`](https://github.com/alpinelinux/docker-alpine/blob/a6c74aa475f4bc471e72f527db6256d8c3a52434/armv7/Dockerfile)
+-	[`3.13.12`, `3.13`](https://github.com/alpinelinux/docker-alpine/blob/4e7658cebff5e569496deea3556a6e258df12a65/armv7/Dockerfile)
+
+[![arm32v7/alpine build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/alpine.svg?label=arm32v7/alpine%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/alpine/)
 
 # Quick reference (cont.)
 
@@ -62,7 +66,7 @@ WARNING:
 Use like you would any other base image:
 
 ```dockerfile
-FROM alpine:3.14
+FROM arm32v7/alpine:3.14
 RUN apk add --no-cache mysql-client
 ENTRYPOINT ["mysql"]
 ```
